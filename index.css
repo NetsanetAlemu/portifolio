@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  line-height: 1.7;
+  color: #fff;
+  background-color: #001227;
+  padding-top: 7rem; /* Prevents navbar from overlapping content */
+  display: flex;
+  justify-content: center; /* Centers content */
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main content wrapper with curved edges */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  background-color: #002b5e; /* Slightly different shade for contrast */
+  padding: 3rem;
+  border-radius: 2rem; /* Curved edges */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds depth */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+  position: fixed; /* Keeps the navbar fixed at the top */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  background-color: rgba(0, 18, 39, 0.9); /* Slight transparency */
+  padding: 1.5rem 3rem;
+  border-radius: 2rem 2rem 0 0; /* Curved top edges */
+  z-index: 1000; /* Ensures it stays above other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; /* Aligns items to the right */
+  gap: 2rem;
+}
+
+.nav-list li {
+  font-size: 1.6rem;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-list li a:hover {
+  color: #f39c12;
+}
+
+/* Profile Section Styling */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 5rem;
+  /* margin-top: 3rem; */
+  text-align: left;
+}
+
+.profile-pic {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f39c12;
+}
+
+.profile-info {
+  max-width: 50rem;
+}
+
+.profile-name {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f39c12;
+}
+
+.profile-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.profile-bio {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  color: #ddd;
+}
+
+.resume-download {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #f39c12;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.resume-download:hover {
+  background-color: #d17f0e;
+}
+
+/* Welcome Section */
+.welcome-section {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+.welcome-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f39c12;
+}
+
+.welcome-text {
+  font-size: 1.8rem;
+  color: #ddd;
+  margin-top: 1rem;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Footer Section */
+.footer {
+  width: 100%;
+  background-color: #001227;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Information */
+.contact-info h2 {
+  font-size: 2.4rem;
+  color: #f39c12;
+  margin-bottom: 1rem;
+}
+
+/* Contact Grid - Two Line Layout */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+/* Individual Contact Items */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.6rem;
+}
+
+.contact-item i {
+  font-size: 2rem;
+  color: #f39c12;
+}
+
+/* Contact Links */
+.contact-item a {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-item a:hover {
+  color: #d17f0e;
+}
+
+/* Technical Skills Section */
+.skills-section {
+  width: 100%;
+  background-color: #002b5e;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-top: 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.skills-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #f39c12;
+  margin-bottom: 2rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Skill Category */
+.skill-category {
+  background-color: #001d3d;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-category h3 {
+  font-size: 2rem;
+  color: #f39c12;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skill-category i {
+  font-size: 2.4rem;
+  color: #f39c12;
+}
+
+.skill-category p {
+  font-size: 1.6rem;
+  color: #ddd;
+}
+
+/* Hover Effect */
+.skill-category:hover {
+  transform: scale(1.05);
+}
+
+.projects-section {
+  padding: 4rem 2rem;
+  background-color: #002b5e;
+  color: #fff;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f39c12;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.project {
+  background-color: #001227;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project-name {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f39c12;
+}
+
+.project-description {
+  font-size: 1.6rem;
+  color: #ddd;
+  margin-top: 1rem;
+}
+
+.technologies-used {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+}
+
+.project-links {
+  margin-top: 1.5rem;
+}
+
+.project-links a {
+  color: #f39c12;
+  font-size: 1.6rem;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.project-links a:hover {
+  color: #d17f0e;
+}
+
+.project-contribution {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+}
+
+.work-experience {
+  background-color: #002b5e;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 2rem;
+}
+
+.work-experience h2 {
+  font-size: 2.5rem;
+  color: #f39c12;
+  margin-bottom: 1rem;
+}
+
+.experience-item {
+  margin-bottom: 2rem;
+}
+
+.experience-item h3 {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.experience-item h4 {
+  font-size: 1.8rem;
+  color: #ddd;
+  font-weight: 600;
+}
+
+.experience-item ul {
+  list-style: disc;
+  margin-left: 2rem;
+  color: #ddd;
+}
+
+.experience-item p {
+  font-size: 1.6rem;
+  color: #ddd;
+  margin-top: 0.5rem;
+}
+
+.education-section {
+  margin-top: 4rem;
+  background-color: #002b5e;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.education-section h2 {
+  font-size: 2.5rem;
+  color: #f39c12;
+  font-weight: 700;
+}
+
+.education-item h3,
+.certifications h3 {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.education-item p {
+  font-size: 1.6rem;
+  color: #ddd;
+  margin-top: 0.5rem;
+}
+
+.certifications ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.certifications li {
+  font-size: 1.6rem;
+  color: #ddd;
+  margin-top: 0.5rem;
+}
